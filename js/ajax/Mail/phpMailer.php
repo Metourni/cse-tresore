@@ -18,7 +18,7 @@ function mailTo($sender_name , $sender_email , $sender_subject,$sender_message )
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
-    $mail->setFrom('phpmailto@gmail.com', 'Metourni Noureddine PhP mailer');
+    $mail->setFrom('phpmailto@gmail.com', $sender_name);
     //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
     $mail->addAddress('en_metourni@esi.dz');               // Name is optional
     $mail->addCC('gy_drif@esi.dz');
@@ -30,8 +30,8 @@ function mailTo($sender_name , $sender_email , $sender_subject,$sender_message )
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
     $mail->isHTML(true);                                  // Set email format to HTML
 
-    $mail->Subject = $sender_subject;
-    $mail->Body    = '
+    $mail->Subject = 'Site : ('.$sender_subject.') BY '.$sender_name.'';
+    /*$mail->Body    = '
     <html>
      <head>
       <title>'.$sender_subject.'</title>
@@ -543,7 +543,11 @@ function mailTo($sender_name , $sender_email , $sender_subject,$sender_message )
 
      </body>
     </html>
-    ';
+    ';*/
+
+    $mail->Body='<html><head><title>Site : ('.$sender_subject.') BY '.$sender_name.'</title></head><body>You have received a new message from your website contact form.<br><br><br>Here are the details:<br><br>Name: '.$sender_name.'<br><br>Email: '.$sender_email.'<br><br>Reason:'.$sender_subject.'<br><br>Message:<br>'.$sender_message.'</body></html>';
+
+
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
     if($mail->send()) {
