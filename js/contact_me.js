@@ -40,6 +40,8 @@ $(function () {
 
                         //clear all fields
                         $('#contactForm').trigger("reset");
+                        $('#contactForm').fadeOut();
+
                     }else{
                         //$('#message-warning').html('Error : '+json.reponse);
                         //$('#message-warning').fadeIn();
