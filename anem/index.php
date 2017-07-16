@@ -33,7 +33,7 @@ $url ="monagence.anem.map://share/args?latitude=".$latitude."&longitude=".$longi
     <meta content="Partage d\'itinéraire" name="description">
 
     <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
-    <meta property="og:title" content="Partage d\'itinéraire">
+    <meta property="og:title" content="Partage d'itinéraire">
     <meta property="og:description" content="Mon agence vous permet de partager vos itinéraires avec vos contacts en un seul clic">
     <meta property="og:site_name" content="Partage d'itinéraire">
     <meta property="og:image" content="map_bg.png">
