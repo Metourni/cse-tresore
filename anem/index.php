@@ -23,14 +23,30 @@ $url ="monagence.anem.map://share/args?latitude=".$latitude."&longitude=".$longi
 
 
 //$url = "https://www.google.com";
-header('Location: ' . $url, false, 303);
+//header('Location: ' . $url, false, 303);
 //die();
 ?>
 
 <html>
 <head>
     <title>Share App</title>
+    <meta content="" name="description">
 
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:image" content="map_bg.png">
+    <meta property="og:url" content="">
+
+
+
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:image" content="map_bg.png">
 </head>
 <body>
     <h1 style="width: 100%">
