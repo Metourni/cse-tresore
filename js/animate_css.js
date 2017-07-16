@@ -6,7 +6,8 @@
 
 $(document).ready(function(){
 
-    $('#features').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+
+	/*$('#features').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
         if (visible) {
             $(this).find('.timer').each(function () {
                 var $this = $(this);
@@ -20,7 +21,7 @@ $(document).ready(function(){
             });
             $(this).unbind('inview');
         }
-    });
+    });*/
 
 	//animationClick('#logo','lightSpeedIn');
 /*

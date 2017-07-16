@@ -299,27 +299,32 @@
 
 
 <!-- cmpt Section -->
+<div id="#meto"></div>
 <section id="features" class="parallax">
     <div class="container">
         <div class="row count">
-            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="300ms"
+                 style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInLeft;">
                 <i class="fa fa-user"></i>
                 <h3 class="timer">4000</h3>
                 <p>Happy Clients</p>
             </div>
-            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 500ms; animation-name: fadeInLeft;">
+            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="500ms"
+                 style="visibility: visible; animation-duration: 1000ms; animation-delay: 500ms; animation-name: fadeInLeft;">
                 <i class="fa fa-desktop"></i>
                 <h3 class="timer">200</h3>
                 <p>Modern Websites</p>
             </div>
-            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="700ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 700ms; animation-name: fadeInLeft;">
+            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="700ms"
+                 style="visibility: visible; animation-duration: 1000ms; animation-delay: 700ms; animation-name: fadeInLeft;">
                 <i class="fa fa-trophy"></i>
                 <h3 class="timer">10</h3>
                 <p>WINNING AWARDS</p>
             </div>
-            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="900ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 900ms; animation-name: fadeInLeft;">
+            <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="900ms"
+                 style="visibility: visible; animation-duration: 1000ms; animation-delay: 900ms; animation-name: fadeInLeft;">
                 <i class="fa fa-comment-o"></i>
-                <h3>24/7</h3>
+                <div><h3 class="timer" >24</h3><h3>/</h3><h3 class="timer" >7</h3></div>
                 <p>Fast Support</p>
             </div>
         </div>
@@ -480,8 +485,41 @@
 
 <!-- Theme JavaScript -->
 <script src="js/freelancer.min.js"></script>
-<script src="js/main.js" ></script>
+<script src="js/main.js"></script>
 <script src="js/animate_css.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+
+<script>
+    jQuery(function ($) {
+
+
+        var waypointUsed = false;
+
+        var waypoint = $('#features').waypoint({
+            handler: function (direction) {
+                console.log("Meto");
+                if (!waypointUsed) {
+                    waypointUsed = true;
+                    $('.timer').each(function () {
+                        $(this).prop('Counter', 0).animate({
+                            Counter: $(this).text()
+                        }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function (now) {
+                                $(this).text(Math.ceil(now));
+                            }
+                        });
+                    });
+                }
+            },
+            context: '#meto',
+            offset: '50%'
+
+        });
+
+    });
+</script>
 
 </body>
 
