@@ -324,7 +324,12 @@
             <div class="col-sm-3 col-xs-6 wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="900ms"
                  style="visibility: visible; animation-duration: 1000ms; animation-delay: 900ms; animation-name: fadeInLeft;">
                 <i class="fa fa-comment-o"></i>
-                <div><h3 class="timer" >24</h3><h3>/</h3><h3 class="timer" >7</h3></div>
+                <br>
+                <div style="display: inline-flex">
+                    <h3 class="timer">24</h3>
+                    <h3>/</h3>
+                    <h3 class="timer">7</h3>
+                </div>
                 <p>Fast Support</p>
             </div>
         </div>
@@ -497,7 +502,7 @@
 
         var waypoint = $('#features').waypoint({
             handler: function (direction) {
-                console.log("Meto");
+                //console.log("Meto");
                 if (!waypointUsed) {
                     waypointUsed = true;
                     $('.timer').each(function () {
@@ -507,14 +512,14 @@
                             duration: 2000,
                             easing: 'swing',
                             step: function (now) {
-                                $(this).text(Math.ceil(now));
+                                $(this).text(Math.ceil(this.Counter));
                             }
                         });
                     });
                 }
             },
             context: '#meto',
-            offset: '50%'
+            offset: '30%'
 
         });
 
