@@ -26,14 +26,15 @@ $url ="monagence.anem.map://share/args?latitude=".$latitude."&longitude=".$longi
 header('Location: ' . $url, false, 303);
 //die();
 ?>
-<!-- 
+
 <html>
 <head>
     <title>Share App</title>
+
 </head>
 <body>
     <h1 style="width: 100%">
         <a href="<?=$url?>">Share 9a3 Agilaz</a>
     </h1>
 </body>
-</html> -->
+</html>
