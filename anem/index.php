@@ -50,7 +50,7 @@ $url ="monagence.anem.map://share/args?latitude=".$latitude."&longitude=".$longi
 </head>
 <body>
     <h1 style="width: 100%">
-        <a href="<?=$url?>">Share 9a3 Agilaz</a>
+        <a href="<?=$url?>">Click here</a>
     </h1>
 </body>
 </html>
