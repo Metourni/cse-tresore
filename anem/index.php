@@ -52,6 +52,7 @@ $url = "monagence.anem.map://share/args?latitude=" . $latitude . "&longitude=" .
 <h1 style="width: 100%">
     <a href="<?= $url ?>">Click here</a>
     <?= header('Location: ' . $url, false, 303); ?>
+    <?= die();?>
 </h1>
 </body>
 </html>
