@@ -18,12 +18,9 @@ if (isset($_GET['latitude']) && isset($_GET['longitude']) && isset($_GET['anemID
     $anemID = 123;
     $type = 123;
 }
-$url = "monagence.anem.map://share/args?latitude=" . $latitude . "&longitude=" . $longitude . "&anemID=" . $anemID . "&type=" . $type . "";
+//$url = "monagence.anem.map://share/args?latitude=" . $latitude . "&longitude=" . $longitude . "&anemID=" . $anemID . "&type=" . $type . "";
+$url = "https://play.google.com/store/apps/details?id=dz.anem.monagence&hl=fr";
 
-
-//$url = "https://www.google.com";
-//header('Location: ' . $url, false, 303);
-//die();
 ?>
 
 <html>
